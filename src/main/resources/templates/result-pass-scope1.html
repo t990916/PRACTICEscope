@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    合計値は「<span th:text="${sum}"></span>」です。
+ 「<span th:text="${session.name}">dummy</span>」さんこんにちは。
+ <br>
+    <a href="result-pass-scope2.html" th:href="@{/pass-scope/to-mypage}">マイページ</a>
 </body>
 </html>
