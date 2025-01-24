@@ -21,10 +21,8 @@ public class PassScopeController {
     @RequestMapping("/input-address")
     public String inputAddress(String name, String name2){
  
-        
          if (name.equals("aono@example.com") && name2.equals("passwordaono")) {
              
-            
              session.setAttribute("name", name);
              session.setAttribute("name2", name2);
              return "result-pass-scope1";
@@ -37,6 +35,10 @@ public class PassScopeController {
 
     @RequestMapping("/to-mypage")
     public String toMypage(){
+
+        if(session.getAttribute("name") == null || session.getAttribute("name2") == null) {
+            return "redirect:/pass-scope";
+        }
         return "result-pass-scope2";
     }
 }

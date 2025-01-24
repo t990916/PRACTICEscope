@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpSession;
 public class SessionScopeController {
 
     @Autowired
-    HttpSession session;
+    private HttpSession session;
 
     @RequestMapping("") //ここは任意でOK、例えば/hoge等でも検索するときに/session-scopr/hogeにすれば問題ない
     public String index(){
